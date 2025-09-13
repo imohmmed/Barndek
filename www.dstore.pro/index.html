@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<!-- Mirrored from www.dstore.pro/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2025 08:41:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>براندك</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/logo.jpg">
+    <style>
+        :root {
+            --red: #e11d48;
+            --red-dark: #a31536;
+            --black: #18181b;
+            --black-light: #23232a;
+            --white: #fff;
+            --gray: #a1a1aa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+        .section { padding: 4rem 0; }
+        .section-title { text-align: center; font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 1rem; }
+        .section-title span { color: var(--red); }
+        .section-subtitle { text-align: center; color: var(--gray); max-width: 600px; margin: 0 auto 3rem auto; }
+
+        /* Header (Desktop) */
+        .main-header {
+            background: var(--black-light);
+            border-bottom: 2px solid var(--red);
+            padding: 0.5rem 0; /* كان 1rem 0 */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-container {
+            min-height: 30px; /* إضافة ارتفاع أصغر */
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--red);
+            padding-right: 6rem; 
+        }
+        .logo span { color: var(--white); }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 1rem;
+            transition: background 0.2s, color 0.2s;
+            position: relative;
+        }
+        .nav-links a.active,
+        .nav-links a:focus,
+        .nav-links a:hover {
+            background: var(--red);
+            color: var(--white);
+        }
+        .cta-btn {
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 2rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            transition: background 0.2s;
+            display: inline-block;
+            margin-left: 3rem;
+        }
+        .cta-btn:hover { background: var(--red-dark); }
+
+        /* Hero Section (New Modern Design) */
+        .hero-modern-landing {
+            position: relative;
+            min-height: 420px;
+            background: linear-gradient(120deg, #e11d48 0%, #18181b 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+        .hero-modern-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .hero-modern-wave {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            width: 100%;
+            height: 180px;
+            z-index: 2;
+            display: block;
+        }
+        .hero-modern-content {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.5rem;
+            min-height: 420px;
+            padding: 2.5rem 1rem 0 1rem;
+        }
+        .hero-modern-text {
+            flex: 1 1 0%;
+            text-align: right;
+            color: #fff;
+            animation: heroFadeIn 0.7s cubic-bezier(.4,2,.6,1);
+        }
+        .hero-modern-text h1 {
+            font-size: 2.9rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+            color: #fff;
+            line-height: 1.2;
+            text-shadow: 0 2px 12px #000a;
+            animation: heroFadeIn 0.7s cubic-bezier(.4,2,.6,1);
+        }
+        .hero-modern-text h1 span {
+            color: #ff1744;
+            text-shadow: 0 2px 12px #ff174488;
+        }
+        .hero-modern-text p {
+            color: #fff;
+            font-size: 1.35rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            text-shadow: 0 2px 12px #000a;
+            animation: heroFadeIn 1.1s cubic-bezier(.4,2,.6,1);
+        }
+        .hero-modern-cta {
+            background: linear-gradient(90deg, #ff1744 0%, #ff6584 100%);
+            color: #fff;
+            border: none;
+            font-size: 1.15rem;
+            font-weight: 900;
+            padding: 0.7rem 2.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 2px 16px #ff174433;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            text-shadow: 0 2px 12px #000a;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-top: 0.5rem;
+            animation: heroFadeIn 1.5s cubic-bezier(.4,2,.6,1);
+        }
+        .hero-modern-cta:hover {
+            background: linear-gradient(90deg, #fff 0%, #ff1744 100%);
+            color: #ff1744;
+            box-shadow: 0 4px 32px #ff174488;
+        }
+        .hero-modern-img {
+            flex: 0 0 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            max-width: 380px;
+            height: 260px;
+            position: relative;
+            z-index: 3;
+            animation: heroFadeInImg 1.2s cubic-bezier(.4,2,.6,1);
+        }
+        .hero-modern-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.2rem;
+            box-shadow: 0 4px 32px #ff174488;
+            border: 3px solid #fff;
+            background: #fff;
+        }
+        @media (max-width: 900px) {
+            .hero-modern-content { flex-direction: column; gap: 1.2rem; padding: 2.2rem 0.2rem 0 0.2rem; min-height: 220px; }
+            .hero-modern-img { height: 120px; max-width: 180px; margin-bottom: 1.2rem; }
+            .hero-modern-text h1 { font-size: 1.3rem; }
+            .hero-modern-text p { font-size: 1rem; }
+            .hero-modern-landing { min-height: 220px; }
+        }
+        @media (max-width: 600px) {
+            .hero-modern-content { padding: 1.2rem 0.2rem 0 0.2rem; }
+            .hero-modern-img { height: 80px; max-width: 120px; }
+            .hero-modern-text h1 { font-size: 1.05rem; }
+            .hero-modern-text p { font-size: 0.85rem; }
+            .hero-modern-text { text-align: center; }
+        }
+        @keyframes heroFadeIn {
+            0% { opacity: 0; transform: translateY(40px) scale(0.97); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes heroFadeInImg {
+            0% { opacity: 0; transform: translateY(-40px) scale(0.97); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Features Section */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .feature-card { background: var(--black-light); padding: 1.5rem; border-radius: 1rem; text-align: center; border: 1px solid #2a2a2a; }
+        .feature-card i { font-size: 2.5rem; color: var(--red); margin-bottom: 1rem; }
+        .feature-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+        /* Services Section */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .service-card {
+            background: var(--black-light);
+            border-radius: 1rem;
+            padding: 2rem 1.2rem;
+            text-align: center;
+            box-shadow: 0 2px 16px #e11d4822;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .service-card:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 8px 32px #e11d4844; }
+        .service-icon { font-size: 2.5rem; color: var(--red); margin-bottom: 1rem; }
+        .service-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; color: #fff; }
+        .service-desc { color: #a1a1aa; font-size: 1rem; }
+
+        /* Timeline */
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 3px; background-color: #2a2a2a; top: 0; bottom: 0; right: 50%; transform: translateX(50%); }
+        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-item:nth-child(odd) { right: 0; }
+        .timeline-item:nth-child(even) { right: 50%; text-align: left; }
+        .timeline-item::after { content: ''; position: absolute; width: 25px; height: 25px; right: -12.5px; background-color: var(--red); border: 4px solid var(--black); top: 15px; border-radius: 50%; z-index: 1; }
+        .timeline-item:nth-child(even)::after { right: auto; left: -12.5px; }
+        .timeline-content { padding: 20px 30px; background-color: var(--black-light); position: relative; border-radius: 6px; }
+
+        /* FAQ Section */
+        .faq-item { background: var(--black-light); margin-bottom: 0.5rem; border-radius: 0.5rem; }
+        .faq-question { width: 100%; text-align: right; background: none; border: none; color: var(--white); padding: 1rem; font-size: 1.1rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 1rem; color: var(--gray); }
+        .faq-answer p { padding-bottom: 1rem; }
+        .faq-item.active .faq-answer { max-height: 100px; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+        .faq-icon { transition: transform 0.3s; }
+
+        /* Footer */
+        footer { background: #000; color: var(--gray); padding: 0.6rem 1rem; margin-top: 3rem; text-align: center; }
+
+        /* --- Mobile Styles --- */
+        .mobile-app {
+            display: none;
+            background: #18181b;
+            min-height: 100vh;
+            font-family: 'Cairo', sans-serif;
+        }
+        @media (max-width: 768px) {
+            .desktop-section { display: none !important; }
+            .mobile-app { display: block !important; padding-bottom: 80px; }
+            .main-header { display: none; }
+            .mobile-hero {
+                background: linear-gradient(120deg, #18181b 60%, #e11d48 120%);
+                padding: 0 0.5rem 1.5rem 0.5rem;
+                text-align: center;
+                border-radius: 0 0 1.5rem 1.5rem;
+                box-shadow: 0 4px 32px #e11d4822;
+            }
+
+            .mobile-hero h1 {
+                font-size: 2.3rem;
+                margin-bottom: 1.1rem;
+                font-weight: 900;
+                color: #fff;
+                line-height: 1.25;
+                letter-spacing: 1px;
+            }
+            .mobile-hero h1 span { color: #e11d48; }
+            .mobile-hero p {
+                color: #fff;
+                font-size: 1.15rem;
+                margin-bottom: 1.2rem;
+                line-height: 1.7;
+            }
+            .mobile-section-title {
+                font-size: 1.1rem;
+                font-weight: 800;
+                color: #e11d48;
+                margin: 1.5rem 0 0.7rem 0;
+                text-align: right;
+                padding-right: 1rem;
+                letter-spacing: 1px;
+            }
+            .services-mobile-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding: 0 0.7rem;
+                justify-content: center;
+            }
+            .service-mobile-card {
+                background: #23232a;
+                border-radius: 1.2rem;
+                box-shadow: 0 2px 12px #e11d4822;
+                width: 48%;
+                min-width: 150px;
+                max-width: 180px;
+                margin-bottom: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                transition: transform 0.2s, box-shadow 0.2s;
+                border: 1px solid #23232a;
+                position: relative;
+                padding: 1.2rem 0.5rem;
+            }
+            .service-mobile-card:hover {
+                transform: translateY(-4px) scale(1.03);
+                box-shadow: 0 6px 24px #e11d4844;
+            }
+            .service-mobile-card .icon {
+                font-size: 2rem;
+                color: #e11d48;
+                margin-bottom: 0.5rem;
+            }
+            .service-mobile-card .title {
+                font-size: 1rem;
+                font-weight: 800;
+                color: #fff;
+                margin-bottom: 0.3rem;
+            }
+            .service-mobile-card .desc {
+                color: #a1a1aa;
+                font-size: 0.97rem;
+            }
+            .bottom-nav {
+                position: fixed;
+                bottom: 0; left: 0; right: 0;
+                background: #23232a;
+                border-top: 2px solid #e11d48;
+                display: flex;
+                justify-content: space-around;
+                align-items: stretch;
+                padding: 0.5rem 0;
+                z-index: 1000;
+            }
+            .bottom-nav a {
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 700;
+                font-size: 0.85rem;
+                padding: 0.2rem 0.5rem;
+                flex-grow: 1;
+                transition: color 0.2s;
+            }
+            .bottom-nav a.active, .bottom-nav a:hover { color: #e11d48; }
+            .bottom-nav i { font-size: 1.5rem; margin-bottom: 4px; }
+        }
+
+        /* Text contrast helpers */
+        .hero-slide-modern-content.light-text .hero-slide-modern-text h1,
+        .hero-slide-modern-content.light-text .hero-slide-modern-text p,
+        .hero-slide-modern-content.light-text .cta-btn-modern {
+            color: #fff !important;
+            text-shadow: 0 2px 12px #000a;
+        }
+        .hero-slide-modern-content.dark-text .hero-slide-modern-text h1,
+        .hero-slide-modern-content.dark-text .hero-slide-modern-text p,
+        .hero-slide-modern-content.dark-text .cta-btn-modern {
+            color: #18181b !important;
+            text-shadow: 0 2px 12px #fff8;
+        }
+
+        /* Scroll Animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(40px) scale(0.97);
+            transition: opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);
+        }
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-section">
+        <header class="main-header">
+              <div class="header-container">
+                <a href="index-2.html" class="logo">Dark<span> Store</span></a>
+                <nav class="nav-links" id="mainNav">
+                    <a href="index-2.html" class="active">الرئيسية</a>
+                    <a href="products.html">المنتجات</a>
+                    <a href="posts.html">المنشورات</a>
+                </nav>
+                <a href="admin/login.html" class="cta-btn">تسجيل الدخول</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section (New Modern Design) -->
+            <section class="hero-modern-landing scroll-animate" id="hero">
+                <div class="hero-modern-bg">
+                    <svg class="hero-modern-wave" viewBox="0 0 1440 180" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <path d="M0,120 C360,200 1080,40 1440,120 L1440,180 L0,180 Z" fill="#18181b"/>
+                    </svg>
+                </div>
+                <div class="hero-modern-content container" style="justify-content:center; text-align:center;">
+                    <div class="hero-modern-text" style="margin:0 auto; float:none; text-align:center;">
+                        <h1><span>طور أعمالك الرقمية</span> مع براندك</h1>
+                        <p>نمنحك تجربة رقمية متكاملة: تصميمات إبداعية، حلول برمجية متطورة، اشتراكات أصلية، ودعم فني لا مثيل له. كل ذلك بسرعة، أمان، واحترافية عالية.</p>
+                        <a href="products.html" class="hero-modern-cta"><i class="fas fa-bolt"></i> اكتشف منتجاتنا وخدماتنا</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Stats Section -->
+            <section class="section scroll-animate" id="stats">
+                <div class="container">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2.2rem;text-align:center;">
+                        <div>
+                            <div style="font-size:2.5rem;color:#e11d48;font-weight:900;">+50,000</div>
+                            <div style="color:#fff;font-weight:700;">طلب منفذ بنجاح<br><span style='color:#a1a1aa;font-size:0.93rem;'>ثقة آلاف العملاء منذ 2017</span></div>
+                        </div>
+                        <div>
+                            <div style="font-size:2.5rem;color:#e11d48;font-weight:900;">+1200</div>
+                            <div style="color:#fff;font-weight:700;">عميل سعيد<br><span style='color:#a1a1aa;font-size:0.93rem;'>شراكات وتجارب متكررة</span></div>
+                        </div>
+                        <div>
+                            <div style="font-size:2.5rem;color:#e11d48;font-weight:900;">24/7</div>
+                            <div style="color:#fff;font-weight:700;">دعم متواصل<br><span style='color:#a1a1aa;font-size:0.93rem;'>استجابة فورية</span></div>
+                        </div>
+                        <div>
+                            <div style="font-size:2.5rem;color:#e11d48;font-weight:900;">+30</div>
+                            <div style="color:#fff;font-weight:700;">خدمة رقمية<br><span style='color:#a1a1aa;font-size:0.93rem;'>تنوع يغطي كل احتياجك</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Us Section (New Content) -->
+            <section class="section scroll-animate" id="features">
+                <div class="container">
+                    <h2 class="section-title">لماذا <span>دارك ستور</span>؟</h2>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2.2rem;justify-items:center;margin-top:2.5rem;">
+                        <div style="display:flex;flex-direction:column;align-items:center;">
+                            <div style="background:rgba(225,29,72,0.10);border:2px solid #e11d48;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:1rem;">
+                                <i class="fas fa-rocket" style="color:#e11d48;font-size:2rem;"></i>
+                            </div>
+                            <div style="font-weight:900;font-size:1.08rem;color:#fff;margin-bottom:0.2rem;">ابتكار مستمر</div>
+                            <div style="color:#a1a1aa;font-size:0.97rem;text-align:center;">نبحث دائماً عن حلول جديدة ونقدم أفكاراً إبداعية تواكب تطور السوق الرقمي، ونمنحك ميزة تنافسية حقيقية.</div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;align-items:center;">
+                            <div style="background:rgba(225,29,72,0.10);border:2px solid #e11d48;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:1rem;">
+                                <i class="fas fa-user-shield" style="color:#e11d48;font-size:2rem;"></i>
+                            </div>
+                            <div style="font-weight:900;font-size:1.08rem;color:#fff;margin-bottom:0.2rem;">ثقة وأمان</div>
+                            <div style="color:#a1a1aa;font-size:0.97rem;text-align:center;">بياناتك محمية بأحدث التقنيات، وخصوصيتك محفوظة في كل تعامل، وسمعتنا مبنية على الأمان والشفافية.</div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;align-items:center;">
+                            <div style="background:rgba(225,29,72,0.10);border:2px solid #e11d48;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:1rem;">
+                                <i class="fas fa-headset" style="color:#e11d48;font-size:2rem;"></i>
+                            </div>
+                            <div style="font-weight:900;font-size:1.08rem;color:#fff;margin-bottom:0.2rem;">دعم احترافي</div>
+                            <div style="color:#a1a1aa;font-size:0.97rem;text-align:center;">فريقنا يرافقك من أول استفسار حتى ما بعد التسليم، ويقدم استشارات مجانية، ويحل مشاكلك بسرعة وود.</div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;align-items:center;">
+                            <div style="background:rgba(225,29,72,0.10);border:2px solid #e11d48;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:1rem;">
+                                <i class="fas fa-gem" style="color:#e11d48;font-size:2rem;"></i>
+                            </div>
+                            <div style="font-weight:900;font-size:1.08rem;color:#fff;margin-bottom:0.2rem;">جودة مضمونة</div>
+                            <div style="color:#a1a1aa;font-size:0.97rem;text-align:center;">كل خدمة أو منتج نقدمه يخضع لمراجعة دقيقة ومعايير جودة عالية، ورضاك هو هدفنا الأول.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section (New Content) -->
+            <section class="section scroll-animate" id="services">
+                <div class="container">
+                    <h2 class="section-title">خدماتنا <span>الأكثر طلباً</span></h2>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.2rem;">
+                        <div style="background:linear-gradient(120deg,#23232a 60%,#18181b 120%);border-radius:1.5rem;padding:2.2rem 1.2rem;box-shadow:0 2px 16px #e11d4822;display:flex;flex-direction:column;align-items:center;">
+                            <div style="background:#fff;width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:1rem;"><i class="fas fa-paint-brush" style="color:#e11d48;font-size:1.7rem;"></i></div>
+                            <div style="font-size:1.15rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">تصميم هوية بصرية</div>
+                            <div style="color:#a1a1aa;font-size:1.01rem;text-align:center;">نصمم لك علامة تجارية متكاملة: شعار، ألوان، خطوط، بروفايل شركة، وكل ما تحتاجه للتميز في السوق.</div>
+                        </div>
+                        <div style="background:linear-gradient(120deg,#23232a 60%,#18181b 120%);border-radius:1.5rem;padding:2.2rem 1.2rem;box-shadow:0 2px 16px #e11d4822;display:flex;flex-direction:column;align-items:center;">
+                            <div style="background:#fff;width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:1rem;"><i class="fas fa-laptop-code" style="color:#e11d48;font-size:1.7rem;"></i></div>
+                            <div style="font-size:1.15rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">برمجة وتطوير</div>
+                            <div style="color:#a1a1aa;font-size:1.01rem;text-align:center;">مواقع احترافية، متاجر إلكترونية، تطبيقات موبايل، حلول برمجية مخصصة تناسب كل فكرة وتدعم نمو أعمالك.</div>
+                        </div>
+                        <div style="background:linear-gradient(120deg,#23232a 60%,#18181b 120%);border-radius:1.5rem;padding:2.2rem 1.2rem;box-shadow:0 2px 16px #e11d4822;display:flex;flex-direction:column;align-items:center;">
+                            <div style="background:#fff;width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:1rem;"><i class="fas fa-video" style="color:#e11d48;font-size:1.7rem;"></i></div>
+                            <div style="font-size:1.15rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">مونتاج وإنتاج مرئي</div>
+                            <div style="color:#a1a1aa;font-size:1.01rem;text-align:center;">فيديوهات دعائية، موشن جرافيك، تحرير صوتي ومرئي، نصنع لك محتوى يلفت الأنظار ويحقق أهدافك.</div>
+                        </div>
+                        <div style="background:linear-gradient(120deg,#23232a 60%,#18181b 120%);border-radius:1.5rem;padding:2.2rem 1.2rem;box-shadow:0 2px 16px #e11d4822;display:flex;flex-direction:column;align-items:center;">
+                            <div style="background:#fff;width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:1rem;"><i class="fas fa-key" style="color:#e11d48;font-size:1.7rem;"></i></div>
+                            <div style="font-size:1.15rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">اشتراكات رقمية أصلية</div>
+                            <div style="color:#a1a1aa;font-size:1.01rem;text-align:center;">اشتراكات منصات عالمية، أدوات تصميم، ألعاب، موارد تعليمية أصلية ومضمونة مع دعم فوري وشرح كامل للاستخدام.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Steps Section (New Content) -->
+            <section class="section scroll-animate">
+                <div class="container">
+                    <h2 class="section-title"><span>كيف تبدأ؟</span></h2>
+                    <div style="display:flex;flex-wrap:wrap;gap:2.5rem;justify-content:center;margin-top:2.5rem;">
+                        <div style="background:rgba(225,29,72,0.10);border-radius:1.2rem;padding:2rem 1.5rem;min-width:220px;max-width:300px;text-align:center;">
+                            <div style="font-size:2.2rem;color:#e11d48;margin-bottom:0.7rem;"><i class="fas fa-search"></i></div>
+                            <div style="font-weight:900;font-size:1.1rem;color:#fff;margin-bottom:0.3rem;">1. تصفح الخدمات</div>
+                            <div style="color:#a1a1aa;font-size:0.97rem;">استعرض جميع الحلول والخدمات، واقرأ التفاصيل والأسعار، وشاهد نماذج الأعمال السابقة.</div>
+                        </div>
+                        <div style="background:rgba(225,29,72,0.10);border-radius:1.2rem;padding:2rem 1.5rem;min-width:220px;max-width:300px;text-align:center;">
+                            <div style="font-size:2.2rem;color:#e11d48;margin-bottom:0.7rem;"><i class="fas fa-comments"></i></div>
+                            <div style="font-weight:900;font-size:1.1rem;color:#fff;margin-bottom:0.3rem;">2. تواصل معنا</div>
+                            <div style="color:#a1a1aa;font-size:0.97rem;">تواصل مع فريقنا عبر الموقع أو الواتساب لأي استفسار أو تخصيص، وسنرشدك خطوة بخطوة حتى استلام طلبك.</div>
+                        </div>
+                        <div style="background:rgba(225,29,72,0.10);border-radius:1.2rem;padding:2rem 1.5rem;min-width:220px;max-width:300px;text-align:center;">
+                            <div style="font-size:2.2rem;color:#e11d48;margin-bottom:0.7rem;"><i class="fas fa-check-circle"></i></div>
+                            <div style="font-weight:900;font-size:1.1rem;color:#fff;margin-bottom:0.3rem;">3. استلم طلبك</div>
+                            <div style="color:#a1a1aa;font-size:0.97rem;">سوف تستلم خدمتك أو منتجك بسرعة، مع ضمان الجودة والدعم بعد التسليم لأي استفسار أو تعديل.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="section scroll-animate" id="testimonials">
+                <div class="container">
+                    <h2 class="section-title">آراء <span>عملائنا</span></h2>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.2rem;margin-top:2.5rem;">
+                        <div style="background:#23232a;border-radius:1.2rem;padding:2rem 1.2rem;box-shadow:0 2px 16px #e11d4822;">
+                            <div style="font-size:1.1rem;color:#fff;font-weight:700;margin-bottom:0.7rem;">“خدمة سريعة واحترافية، أنصح الجميع بالتعامل مع براندك. فريق الدعم متعاون جداً، وتم تنفيذ طلبي بدقة.”</div>
+                            <div style="color:#e11d48;font-weight:900;">— محمد، بغداد</div>
+                        </div>
+                        <div style="background:#23232a;border-radius:1.2rem;padding:2rem 1.2rem;box-shadow:0 2px 16px #e11d4822;">
+                            <div style="font-size:1.1rem;color:#fff;font-weight:700;margin-bottom:0.7rem;">“جودة المنتجات الرقمية ممتازة، وكل شيء تم بسرعة وسهولة. سأتعامل معهم دائماً، وأوصي بهم لأي شخص.”</div>
+                            <div style="color:#e11d48;font-weight:900;">— سارة، البصرة</div>
+                        </div>
+                        <div style="background:#23232a;border-radius:1.2rem;padding:2rem 1.2rem;box-shadow:0 2px 16px #e11d4822;">
+                            <div style="font-size:1.1rem;color:#fff;font-weight:700;margin-bottom:0.7rem;">“وجدت كل ما أحتاجه من اشتراكات أصلية، والدعم كان سريعاً وفعالاً، وتم حل مشكلتي فوراً.”</div>
+                            <div style="color:#e11d48;font-weight:900;">— علي، أربيل</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section (Updated) -->
+            <section class="section scroll-animate" id="faq">
+                <div class="container max-w-3xl mx-auto">
+                    <h2 class="section-title">أسئلة <span>شائعة</span></h2>
+                    <div class="space-y-2">
+                        <div class="faq-item"><button class="faq-question"><span>هل جميع المنتجات أصلية ومضمونة؟</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer"><p>نعم، جميع المنتجات والاشتراكات أصلية 100% ونضمن لك فعاليتها. في حال واجهت أي مشكلة سنعوضك فوراً أو نعيد لك المبلغ.</p></div></div>
+                        <div class="faq-item"><button class="faq-question"><span>كيف أطلب خدمة أو منتج؟</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer"><p>يمكنك الطلب مباشرة عبر الموقع أو التواصل مع فريقنا عبر الواتساب أو البريد لأي استفسار أو تخصيص. سنساعدك في اختيار الأنسب لك.</p></div></div>
+                        <div class="faq-item"><button class="faq-question"><span>هل يوجد دعم فني بعد الشراء؟</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer"><p>نعم، فريق الدعم متواجد 24/7 لمساعدتك في أي وقت، حتى بعد التسليم. هدفنا رضاك التام.</p></div></div>
+                        <div class="faq-item"><button class="faq-question"><span>ما هي طرق الدفع المتاحة؟</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer"><p>ندعم جميع طرق الدفع المحلية والعالمية (بطاقات، زين كاش، عملات رقمية وغيرها)، ويمكنك اختيار الأنسب لك بسهولة وأمان.</p></div></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 براندك. برمجة وتصميم ذوالفقار شلوم.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ====== MOBILE APP MINIMAL DARK RED DESIGN ====== -->
+    <div class="mobile-app">
+        <!-- Hero -->
+        <div class="mobile-hero scroll-animate" style="background:linear-gradient(120deg,#18181b 60%,#e11d48 120%);padding:0 0.5rem 1.5rem 0.5rem;text-align:center;border-radius:0 0 1.5rem 1.5rem;box-shadow:0 4px 32px #e11d4822;">
+            <img src="assets/images/logo.jpg" alt="شعار دارك ستور" style="width:200px;height:200px;display:block;margin:0 auto -32px auto;padding-top:0;">
+            <h1 style="font-size:2.1rem;font-weight:900;color:#fff;margin:0;line-height:1.18;letter-spacing:1px;position:relative;top:-18px;">
+                سهل تكون متجر بس صعب تكون <span style="color:#e11d48;">دارك ستور</span>
+            </h1>
+        </div>
+
+        <!-- Services List -->
+        <div id="services-mob" class="scroll-animate" style="padding:1.5rem 0.7rem 0 0.7rem;">
+            <div style="font-weight:900;color:#e11d48;font-size:1.1rem;margin-bottom:1rem;text-align:right;">خدماتنا</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.7rem;justify-content:center;">
+                <div style="background:#23232a;border-radius:1.2rem;box-shadow:0 2px 12px #e11d4822;width:47%;min-width:140px;max-width:170px;margin-bottom:1rem;display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.1rem 0.5rem;">
+                    <i class="fas fa-paint-brush" style="font-size:2rem;color:#e11d48;margin-bottom:0.5rem;"></i>
+                    <div style="font-weight:800;color:#fff;">تصميم هوية بصرية</div>
+                    <div style="color:#a1a1aa;font-size:0.93rem;">شعار، ألوان، بروفايل، تميزك عن الجميع.</div>
+                </div>
+                <div style="background:#23232a;border-radius:1.2rem;box-shadow:0 2px 12px #e11d4822;width:47%;min-width:140px;max-width:170px;margin-bottom:1rem;display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.1rem 0.5rem;">
+                    <i class="fas fa-laptop-code" style="font-size:2rem;color:#e11d48;margin-bottom:0.5rem;"></i>
+                    <div style="font-weight:800;color:#fff;">برمجة وتطوير</div>
+                    <div style="color:#a1a1aa;font-size:0.93rem;">مواقع، متاجر، تطبيقات، حلول مخصصة.</div>
+                </div>
+                <div style="background:#23232a;border-radius:1.2rem;box-shadow:0 2px 12px #e11d4822;width:47%;min-width:140px;max-width:170px;margin-bottom:1rem;display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.1rem 0.5rem;">
+                    <i class="fas fa-video" style="font-size:2rem;color:#e11d48;margin-bottom:0.5rem;"></i>
+                    <div style="font-weight:800;color:#fff;">مونتاج وإنتاج مرئي</div>
+                    <div style="color:#a1a1aa;font-size:0.93rem;">فيديوهات دعائية وموشن جرافيك احترافي.</div>
+                </div>
+                <div style="background:#23232a;border-radius:1.2rem;box-shadow:0 2px 12px #e11d4822;width:47%;min-width:140px;max-width:170px;margin-bottom:1rem;display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.1rem 0.5rem;">
+                    <i class="fas fa-key" style="font-size:2rem;color:#e11d48;margin-bottom:0.5rem;"></i>
+                    <div style="font-weight:800;color:#fff;">اشتراكات أصلية</div>
+                    <div style="color:#a1a1aa;font-size:0.93rem;">منصات، أدوات، ألعاب، موارد تعليمية.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Us Cards -->
+        <div class="scroll-animate" style="padding:2rem 0.7rem 0 0.7rem;">
+            <div style="font-weight:900;color:#e11d48;font-size:1.1rem;margin-bottom:1rem;text-align:right;">لماذا نحن؟</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+                <div style="background:#23232a;border-radius:1rem;padding:1rem;text-align:center;box-shadow:0 2px 8px #e11d4822;">
+                    <i class="fas fa-rocket" style="color:#e11d48;font-size:1.3rem;"></i>
+                    <div style="font-weight:800;color:#fff;margin-top:0.5rem;">ابتكار</div>
+                </div>
+                <div style="background:#23232a;border-radius:1rem;padding:1rem;text-align:center;box-shadow:0 2px 8px #e11d4822;">
+                    <i class="fas fa-user-shield" style="color:#e11d48;font-size:1.3rem;"></i>
+                    <div style="font-weight:800;color:#fff;margin-top:0.5rem;">ثقة وأمان</div>
+                </div>
+                <div style="background:#23232a;border-radius:1rem;padding:1rem;text-align:center;box-shadow:0 2px 8px #e11d4822;">
+                    <i class="fas fa-headset" style="color:#e11d48;font-size:1.3rem;"></i>
+                    <div style="font-weight:800;color:#fff;margin-top:0.5rem;">دعم سريع</div>
+                </div>
+                <div style="background:#23232a;border-radius:1rem;padding:1rem;text-align:center;box-shadow:0 2px 8px #e11d4822;">
+                    <i class="fas fa-gem" style="color:#e11d48;font-size:1.3rem;"></i>
+                    <div style="font-weight:800;color:#fff;margin-top:0.5rem;">جودة</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Steps Horizontal -->
+        <div class="scroll-animate" style="padding:2rem 0.7rem 0 0.7rem;">
+            <div style="font-weight:900;color:#e11d48;font-size:1.1rem;margin-bottom:1rem;text-align:right;">كيف تطلب بسهولة؟</div>
+            <div style="display:flex;gap:0.7rem;overflow-x:auto;">
+                <div style="background:#23232a;border-radius:1rem;min-width:120px;padding:1.2rem 0.7rem;text-align:center;box-shadow:0 2px 8px #e11d4822;display:flex;flex-direction:column;align-items:center;">
+                    <div style="font-size:1.3rem;color:#e11d48;margin-bottom:0.3rem;"><i class='fas fa-search'></i></div>
+                    <div style="font-weight:800;color:#fff;margin-bottom:0.2rem;">1. استعرض الخدمات</div>
+                    <div style="color:#a1a1aa;font-size:0.93rem;">تصفح جميع الحلول واختر الأنسب لاحتياجك.</div>
+                </div>
+                <div style="background:#23232a;border-radius:1rem;min-width:120px;padding:1.2rem 0.7rem;text-align:center;box-shadow:0 2px 8px #e11d4822;display:flex;flex-direction:column;align-items:center;">
+                    <div style="font-size:1.3rem;color:#e11d48;margin-bottom:0.3rem;"><i class='fas fa-comments'></i></div>
+                    <div style="font-weight:800;color:#fff;margin-bottom:0.2rem;">2. تواصل معنا</div>
+                    <div style="color:#a1a1aa;font-size:0.93rem;">راسلنا عبر الموقع أو الواتساب لأي استفسار أو تخصيص.</div>
+                </div>
+                <div style="background:#23232a;border-radius:1rem;min-width:120px;padding:1.2rem 0.7rem;text-align:center;box-shadow:0 2px 8px #e11d4822;display:flex;flex-direction:column;align-items:center;">
+                    <div style="font-size:1.3rem;color:#e11d48;margin-bottom:0.3rem;"><i class='fas fa-check-circle'></i></div>
+                    <div style="font-weight:800;color:#fff;margin-bottom:0.2rem;">3. استلم طلبك بسرعة</div>
+                    <div style="color:#a1a1aa;font-size:0.93rem;">سوف تستلم خدمتك أو منتجك بجودة عالية ودعم مستمر.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial Card with Arrows -->
+        <div style="padding:2rem 0.7rem 0 0.7rem;">
+            <div style="font-weight:900;color:#e11d48;font-size:1.1rem;margin-bottom:1rem;text-align:right;">رأي عميل</div>
+            <div style="background:#23232a;border-radius:1.2rem;padding:1.2rem 1rem;box-shadow:0 2px 16px #e11d4822;text-align:center;min-height:90px;position:relative;">
+                <button id="prevTest" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:none;border:none;color:#e11d48;font-size:1.2rem;cursor:pointer;"><i class="fas fa-chevron-right"></i></button>
+                <button id="nextTest" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:none;border:none;color:#e11d48;font-size:1.2rem;cursor:pointer;"><i class="fas fa-chevron-left"></i></button>
+                <div id="testimonial-text-mob" style="font-size:1rem;color:#fff;font-weight:700;margin-bottom:0.7rem;">“خدمة سريعة واحترافية، أنصح الجميع بالتعامل مع براندك.”</div>
+                <div id="testimonial-author-mob" style="color:#e11d48;font-weight:900;">— محمد، بغداد</div>
+            </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div style="padding:2rem 0.7rem 80px 0.7rem;">
+            <div style="font-weight:900;color:#e11d48;font-size:1.1rem;margin-bottom:1rem;text-align:right;">الأسئلة الشائعة</div>
+            <div style="background:#23232a;border-radius:1rem;margin-bottom:0.7rem;">
+                <button style="width:100%;background:none;border:none;color:#fff;padding:1rem;font-size:1rem;font-weight:700;text-align:right;display:flex;justify-content:space-between;align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                    هل جميع المنتجات أصلية؟ <i class="fas fa-chevron-down"></i>
+                </button>
+                <div style="display:none;color:#a1a1aa;padding:0 1rem 1rem 1rem;">نعم، جميع المنتجات والاشتراكات أصلية 100% ونضمن لك فعاليتها.</div>
+            </div>
+            <div style="background:#23232a;border-radius:1rem;margin-bottom:0.7rem;">
+                <button style="width:100%;background:none;border:none;color:#fff;padding:1rem;font-size:1rem;font-weight:700;text-align:right;display:flex;justify-content:space-between;align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                    كيف أطلب خدمة؟ <i class="fas fa-chevron-down"></i>
+                </button>
+                <div style="display:none;color:#a1a1aa;padding:0 1rem 1rem 1rem;">يمكنك الطلب مباشرة عبر الموقع أو التواصل مع فريقنا لأي استفسار.</div>
+            </div>
+            <div style="background:#23232a;border-radius:1rem;margin-bottom:0.7rem;">
+                <button style="width:100%;background:none;border:none;color:#fff;padding:1rem;font-size:1rem;font-weight:700;text-align:right;display:flex;justify-content:space-between;align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                    هل يوجد دعم بعد الشراء؟ <i class="fas fa-chevron-down"></i>
+                </button>
+                <div style="display:none;color:#a1a1aa;padding:0 1rem 1rem 1rem;">نعم، فريق الدعم متواجد 24/7 لمساعدتك في أي وقت.</div>
+            </div>
+            <div style="background:#23232a;border-radius:1rem;margin-bottom:0.7rem;">
+                <button style="width:100%;background:none;border:none;color:#fff;padding:1rem;font-size:1rem;font-weight:700;text-align:right;display:flex;justify-content:space-between;align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">
+                    ما طرق الدفع؟ <i class="fas fa-chevron-down"></i>
+                </button>
+                <div style="display:none;color:#a1a1aa;padding:0 1rem 1rem 1rem;">ندعم جميع طرق الدفع المحلية والعالمية (بطاقات، زين كاش، عملات رقمية وغيرها).</div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Bar (Fixed) -->
+        <nav class="bottom-nav" style="position:fixed;bottom:0;left:0;right:0;background:#23232a;border-top:2px solid #e11d48;display:flex;justify-content:space-around;align-items:stretch;padding:0.5rem 0;z-index:1000;box-shadow:0 -2px 16px #e11d4822;">
+            <a href="#" class="active"><i class="fas fa-home"></i><span style="font-size:0.85rem;display:block;margin-top:2px;">الرئيسية</span></a>
+            <a href="products.html"><i class="fas fa-box"></i><span style="font-size:0.85rem;display:block;margin-top:2px;">المنتجات</span></a>
+            <a href="posts.html"><i class="fas fa-comments"></i><span style="font-size:0.85rem;display:block;margin-top:2px;">المنشورات</span></a>
+            <a href="admin/login.html"><i class="fas fa-user"></i><span style="font-size:0.85rem;display:block;margin-top:2px;">دخول</span></a>
+        </nav>
+        <script>
+        // Scroll animation for all .scroll-animate elements
+        function animateOnScroll() {
+            var elements = document.querySelectorAll('.scroll-animate');
+            var windowHeight = window.innerHeight;
+            elements.forEach(function(el) {
+                var rect = el.getBoundingClientRect();
+                if (rect.top < windowHeight - 60) {
+                    el.classList.add('visible');
+                } else {
+                    el.classList.remove('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('resize', animateOnScroll);
+        document.addEventListener('DOMContentLoaded', function() {
+            animateOnScroll();
+            // FAQ Accordion (Desktop)
+            document.querySelectorAll('.faq-question').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    var item = btn.closest('.faq-item');
+                    if (item.classList.contains('active')) {
+                        item.classList.remove('active');
+                    } else {
+                        document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('active');});
+                        item.classList.add('active');
+                    }
+                });
+            });
+            // Testimonials arrows (mobile)
+            const testimonials = [
+                {text: '“خدمة سريعة واحترافية، أنصح الجميع بالتعامل مع براندك.”', author: '— محمد، بغداد'},
+                {text: '“جودة المنتجات الرقمية ممتازة، وكل شيء تم بسرعة وسهولة. سأتعامل معهم دائماً.”', author: '— سارة، البصرة'},
+                {text: '“وجدت كل ما أحتاجه من اشتراكات أصلية، والدعم كان سريعاً وفعالاً.”', author: '— علي، أربيل'}
+            ];
+            let idx = 0;
+            document.getElementById('prevTest').onclick = function() {
+                idx = (idx - 1 + testimonials.length) % testimonials.length;
+                document.getElementById('testimonial-text-mob').innerText = testimonials[idx].text;
+                document.getElementById('testimonial-author-mob').innerText = testimonials[idx].author;
+            };
+            document.getElementById('nextTest').onclick = function() {
+                idx = (idx + 1) % testimonials.length;
+                document.getElementById('testimonial-text-mob').innerText = testimonials[idx].text;
+                document.getElementById('testimonial-author-mob').innerText = testimonials[idx].author;
+            };
+        });
+        </script>
+    </div>
+</body>
+
+<!-- Mirrored from www.dstore.pro/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2025 08:41:46 GMT -->
+</html>

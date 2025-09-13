@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<!-- Mirrored from www.dstore.pro/admin/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2025 08:41:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>تسجيل الدخول - متجر براندك</title>
+    <link rel="icon" href="../assets/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #E53E3E;
+            --primary-dark: #b91c1c;
+            --dark-bg: #181c23;
+            --dark-secondary: #23272f;
+            --light-text: #fff;
+            --light-gray: #bdbdbd;
+            --footer-text: #a1a1aa;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 60%, var(--primary-dark) 100%);
+            color: var(--light-text);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        
+        .login-header {
+            width: 100%;
+            background: var(--dark-bg);
+            box-shadow: 0 2px 12px rgba(225, 29, 72, 0.13);
+            border-bottom: 1.5px solid rgba(229, 62, 62, 0.2);
+            padding: 1.5rem 0;
+            margin-bottom: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .login-header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+        }
+        
+        .login-header .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        
+        .login-header .brand img {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(225, 29, 72, 0.27);
+            background: var(--light-text);
+        }
+        
+        .login-header .brand span {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 0.5px;
+        }
+        
+        .login-header .logo-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--dark-bg);
+            border: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .login-header .logo-circle img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .login-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .login-box {
+            width: 100%;
+            max-width: 420px;
+            padding: 2rem 1.8rem;
+            background: rgba(24, 28, 35, 0.95);
+            border-radius: 0.8rem;
+            border: 1.5px solid var(--primary-color);
+            box-shadow: 0 4px 20px rgba(225, 29, 72, 0.15);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        
+        .login-box h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+        
+        .login-box .desc {
+            text-align: center;
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.8rem;
+        }
+        
+        .login-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        
+        .login-box .form-group {
+            width: 100%;
+        }
+        
+        .login-box label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--light-gray);
+            text-align: right;
+        }
+        
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(35, 39, 47, 0.9);
+            border: 1.5px solid var(--primary-color);
+            color: var(--light-text);
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            outline: none;
+            box-shadow: 0 1px 6px rgba(225, 29, 72, 0.13);
+            transition: all 0.3s ease;
+        }
+        
+        .login-box input[type="text"]::placeholder,
+        .login-box input[type="password"]::placeholder {
+            color: var(--light-gray);
+            opacity: 1;
+            font-size: 0.9rem;
+        }
+        
+        .login-box input[type="text"]:focus,
+        .login-box input[type="password"]:focus {
+            border: 1.5px solid var(--light-text);
+            background: rgba(35, 39, 47, 1);
+            box-shadow: 0 2px 12px rgba(225, 29, 72, 0.27);
+        }
+        
+        .login-box button[type="submit"] {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            background: var(--primary-color);
+            color: var(--light-text);
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(225, 29, 72, 0.3);
+        }
+        
+        .login-box button[type="submit"]:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(225, 29, 72, 0.4);
+        }
+        
+        .login-box button[type="submit"]:active {
+            transform: translateY(0);
+        }
+        
+        .login-box .error {
+            background: var(--primary-dark);
+            color: var(--light-text);
+            border: 1.5px solid var(--primary-color);
+            padding: 0.8rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            margin-top: auto;
+            background: rgba(24, 28, 35, 0.8);
+            color: var(--footer-text);
+            text-align: center;
+            font-size: 0.85rem;
+            padding: 1.2rem 0;
+            letter-spacing: 0.2px;
+        }
+        
+        /* تحسينات للهواتف الصغيرة */
+        @media (max-width: 480px) {
+            .login-header {
+                padding: 1rem 0;
+            }
+            
+            .login-header .container {
+                padding: 0 1rem;
+            }
+            
+            .login-header .brand span {
+                font-size: 1.2rem;
+            }
+            
+            .login-header .brand img,
+            .login-header .logo-circle img {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .login-header .logo-circle {
+                width: 38px;
+                height: 38px;
+            }
+            
+            .login-box {
+                padding: 1.5rem 1.2rem;
+                max-width: 95%;
+            }
+            
+            .login-box h1 {
+                font-size: 1.5rem;
+                margin-bottom: 0.6rem;
+            }
+            
+            .login-box .desc {
+                font-size: 0.85rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .login-box input[type="text"],
+            .login-box input[type="password"] {
+                padding: 0.7rem 0.9rem;
+                font-size: 0.9rem;
+            }
+            
+            .login-box button[type="submit"] {
+                padding: 0.7rem;
+                font-size: 0.95rem;
+            }
+            
+            footer {
+                font-size: 0.8rem;
+                padding: 1rem 0.5rem;
+            }
+        }
+        
+        /* تحسينات للأجهزة اللوحية */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .login-box {
+                max-width: 80%;
+            }
+        }
+        
+        /* تحسينات للشاشات الكبيرة */
+        @media (min-width: 1200px) {
+            .login-header .container {
+                padding: 0 2rem;
+            }
+            
+            .login-box {
+                padding: 2.5rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="login-header">
+        <div class="container">
+            <div class="brand">
+                <span>براندك</span>
+            </div>
+            <div class="logo-circle">
+                <img src="../assets/images/logo.jpg" alt="Logo">
+            </div>
+        </div>
+    </header>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>تسجيل الدخول</h1>
+            <div class="desc">أدخل بياناتك للوصول إلى حسابك</div>
+                        <form action="https://www.dstore.pro/admin/process_login.php" method="POST">
+                <div class="form-group">
+                    <label for="username">اسم المستخدم أو رقم الهاتف </label>
+                    <input type="text" id="username" name="username"  required>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" name="password"  required>
+                </div>
+                <button type="submit">دخول</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        © 2025 برمجة وتصميم ذو الفقار شلوم. براندك
+    </footer>
+</body>
+
+<!-- Mirrored from www.dstore.pro/admin/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2025 08:41:47 GMT -->
+</html>

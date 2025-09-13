@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<!-- Mirrored from www.dstore.pro/posts.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2025 08:41:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>براندك</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/logo.jpg">
+    <style>
+        :root {
+            --red: #e11d48;
+            --red-dark: #a31536;
+            --black: #18181b;
+            --black-light: #23232a;
+            --white: #fff;
+            --gray: #a1a1aa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+        .section { padding: 4rem 0; }
+        .section-title { text-align: center; font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 1rem; }
+        .section-title span { color: var(--red); }
+        .section-subtitle { text-align: center; color: var(--gray); max-width: 600px; margin: 0 auto 3rem auto; }
+
+        /* Header (Desktop) */
+        .main-header {
+            background: var(--black-light);
+            border-bottom: 2px solid var(--red);
+            padding: 0.5rem 0; /* كان 1rem 0 */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-container {
+            min-height: 30px; /* إضافة ارتفاع أصغر */
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--red);
+            padding-right: 6rem; /* أضف هذا البادينغ لإبعاد الشعار عن الحافة اليمنى */
+        }
+        .logo span { color: var(--white); }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 1rem;
+            transition: background 0.2s, color 0.2s;
+            position: relative;
+        }
+        .nav-links a.active,
+        .nav-links a:focus,
+        .nav-links a:hover {
+            background: var(--red);
+            color: var(--white);
+        }
+        .cta-btn {
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 2rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            transition: background 0.2s;
+            display: inline-block;
+            margin-left: 3rem;
+        }
+        .cta-btn:hover { background: var(--red-dark); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, #18181b 60%, #e11d48 120%);
+            padding: 4rem 0; text-align: center;
+        }
+        .hero h1 { font-size: 2.5rem; font-weight: 900; color: var(--white); margin-bottom: 1rem; }
+        .hero h1 span { color: var(--red); }
+        .hero p { color: var(--gray); font-size: 1.1rem; margin-bottom: 1.5rem; max-width: 500px; margin: 0 auto 1.5rem auto; }
+        .cta-btn-main { margin-top: 1.5rem; }
+
+    
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: var(--gray);
+            padding: 0.6rem 1rem;
+            margin-top: 3rem;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 900;
+        }
+
+        /* --- Mobile Styles --- */
+        .mobile-app {
+            display: none;
+            background: #18181b;
+            min-height: 100vh;
+            font-family: 'Cairo', sans-serif;
+        }
+        @media (max-width: 768px) {
+            .desktop-section { display: none !important; }
+            .mobile-app { display: block !important; padding-bottom: 80px; }
+            .main-header { display: none; }
+            .mobile-hero {
+                background: linear-gradient(120deg, #18181b 60%, #e11d48 120%);
+                padding: 2.5rem 1rem 2.5rem 1rem;
+                text-align: center;
+                border-radius: 0 0 1.5rem 1.5rem;
+            }
+
+            .mobile-hero h1 {
+                font-size: 1.6rem !important;
+                margin-bottom: 0.7rem !important;
+                font-weight: 900;
+                color: #fff;
+                line-height: 1.3;
+                letter-spacing: 1px;
+            }
+            .mobile-hero h1 span { color: #e11d48; }
+            .mobile-hero p {
+                color: #fff;
+                font-size: 1rem !important;
+                margin-bottom: 0.8rem !important;
+                line-height: 1.7;
+            }
+            .mobile-hero .cta-btn-main {
+                background: #e11d48;
+                color: #fff;
+                padding: 0.5rem 1.5rem;
+                border-radius: 1.5rem;
+                font-weight: 700;
+                font-size: 1rem;
+                display: inline-block;
+                margin-top: 1rem;
+            }
+            .bottom-nav {
+                position: fixed;
+                bottom: 0; left: 0; right: 0;
+                background: #23232a;
+                border-top: 2px solid #e11d48;
+                display: flex;
+                justify-content: space-around;
+                align-items: stretch;
+                padding: 0.5rem 0;
+                z-index: 1000;
+            }
+            .bottom-nav a {
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 700;
+                font-size: 0.85rem;
+                padding: 0.2rem 0.5rem;
+                flex-grow: 1;
+                transition: color 0.2s;
+            }
+            .bottom-nav a.active, .bottom-nav a:hover { color: #e11d48; }
+            .bottom-nav i { font-size: 1.5rem; margin-bottom: 4px; }
+        }
+        @media (min-width: 769px) {
+    .bottom-nav { display: none !important; }
+}
+        @media (max-width: 768px) {
+            .section {
+                padding: 2.2rem 0.2rem 1.5rem 0.2rem;
+            }
+            .section-title {
+                font-size: 1.35rem;
+                margin-bottom: 0.7rem;
+            }
+            .section-subtitle {
+                font-size: 0.98rem;
+                margin-bottom: 1.7rem;
+                color: #fff;
+            }
+            .cta-btn-main, .section a[href="add_post.php"] {
+                font-size: 1.05rem;
+                padding: 0.7rem 1.5rem;
+                border-radius: 1.2rem;
+                margin-bottom: 1.2rem;
+                box-shadow: 0 2px 12px #e11d4822;
+                font-weight: 900;
+            }
+            .section > div[style*="display:grid"] {
+                gap: 0.7rem !important;
+            }
+            .section > div[style*="background:#23232a"] {
+                background: #23232aee !important;
+                border-radius: 1.1rem !important;
+                box-shadow: 0 2px 12px #e11d4822 !important;
+                padding: 1.1rem 0.7rem !important;
+            }
+            .section > div[style*="color:#a1a1aa"] {
+                font-size: 1.01rem;
+            }
+        }
+
+        .post-card {
+            background: #23232a;
+            border-radius: 1.3rem;
+            box-shadow: 0 2px 16px #0005;
+            padding: 1.3rem 1.1rem 1.1rem 1.1rem;
+            position: relative;
+            border: 1.5px solid #23232a;
+            transition: box-shadow 0.2s, border 0.2s, transform 0.15s;
+        }
+        .post-card:hover {
+            box-shadow: 0 4px 32px #e11d4844;
+            border: 1.5px solid #e11d48;
+            transform: translateY(-3px) scale(1.012);
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-bottom: 0.5rem;
+        }
+        .post-stars {
+            color: #e11d48;
+            font-weight: 900;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+        }
+        .post-stars .star-empty {
+            color: #444;
+        }
+        .post-name {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+        .post-date {
+            color: #a1a1aa;
+            font-size: 0.93rem;
+            margin-right: auto;
+        }
+        .post-content {
+            color: #fff;
+            font-size: 1.08rem;
+            line-height: 1.8;
+            margin-top: 0.2rem;
+            word-break: break-word;
+            padding-right: 0.2rem;
+        }
+        .post-card {
+            border-left: 4px solid #e11d48;
+        }
+        @media (max-width: 768px) {
+            .post-card {
+                padding: 1.1rem 0.7rem 1rem 0.7rem;
+                border-radius: 1.1rem;
+                border-left-width: 3px;
+            }
+            .post-header {
+                gap: 0.5rem;
+            }
+            .post-name { font-size: 0.98rem; }
+            .post-date { font-size: 0.85rem; }
+            .post-content { font-size: 1.01rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-section">
+        <header class="main-header">
+            <div class="header-container">
+                <a href="index-2.html" class="logo">Dark<span> Store</span></a>
+                <nav class="nav-links" id="mainNav">
+                    <a href="index-2.html" class="active">الرئيسية</a>
+                    <a href="products.html">المنتجات</a>
+                    <a href="posts.html">المنشورات</a>
+                </nav>
+                <a href="admin/login.html" class="cta-btn">تسجيل الدخول</a>
+            </div>
+        </header>
+        <!-- ====== محتوى المنشورات ====== -->
+        <main>
+            <section class="section" style="max-width:700px;margin:0 auto;">
+                <h2 class="section-title">منشورات <span>الزوار</span></h2>
+                <div class="section-subtitle">شارك رأيك أو تجربتك مع براندك، أو اقرأ منشورات الزوار الآخرين.</div>
+                <!-- زر إضافة منشور -->
+                <div style="text-align:center;margin-bottom:2.5rem;">
+                    <a href="add_post.html" style="display:inline-block;background:#e11d48;color:#fff;padding:0.5rem 1.3rem;border-radius:0.7rem;font-weight:900;font-size:1.05rem;border:none;cursor:pointer;transition:background 0.2s;">أضف منشورك</a>
+                </div>
+                <!-- عرض المنشورات (ديسكتوب) -->
+                <div style="margin-bottom:2.5rem;">
+                                    <div style="display:grid;grid-template-columns:1fr;gap:1.2rem;">
+                                                <div class="post-card" data-post-id="1">
+                            <div class="post-header">
+                                <span class="post-stars">
+                                    ★★★★★                                                                    </span>
+                                <span class="post-name"> ذوالفقار شلوم </span>
+                                <span class="post-date"> 2025-06-25 </span>
+                            </div>
+                            <div class="post-content"> تم بحمد الله تعالى . </div>
+                            <div style="margin-top:1rem;display:flex;gap:1.2rem;justify-content:flex-end;">
+                                <button class="like-btn" onclick="handleLikeDislike('1','like')" style="background:#23232a;color:#4ade80;border:none;padding:0.4rem 1.1rem;border-radius:1.2rem;font-weight:700;font-size:1.05rem;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;gap:0.4rem;"><i class="fas fa-thumbs-up"></i> <span class="like-count" data-post-id="1">8</span></button>
+                                <button class="dislike-btn" onclick="handleLikeDislike('1','dislike')" style="background:#23232a;color:#e11d48;border:none;padding:0.4rem 1.1rem;border-radius:1.2rem;font-weight:700;font-size:1.05rem;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;gap:0.4rem;"><i class="fas fa-thumbs-down"></i> <span class="dislike-count" data-post-id="1">0</span></button>
+                            </div>
+                        </div>
+                                            </div>
+                                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 براندك. برمجة وتصميم ذوالفقار شلوم.</p>
+            </div>
+        </footer>
+    </div>
+    <div class="mobile-app">
+        <section class="section" style="max-width:700px;margin:0 auto;">
+            <h2 class="section-title">منشورات <span>الزوار</span></h2>
+            <div class="section-subtitle">شارك رأيك أو تجربتك مع براندك، أو اقرأ منشورات الزوار الآخرين.</div>
+            <div style="text-align:center;margin-bottom:2.2rem;">
+                <a href="add_post.html" style="display:inline-block;background:#e11d48;color:#fff;padding:0.7rem 1.5rem;border-radius:1.2rem;font-weight:900;font-size:1.05rem;border:none;cursor:pointer;box-shadow:0 2px 12px #e11d4822;transition:background 0.2s;">أضف منشورك</a>
+            </div>
+            <!-- عرض المنشورات (موبايل) -->
+            <div style="margin-bottom:2.5rem;">
+                            <div style="display:grid;grid-template-columns:1fr;gap:0.7rem;">
+                                        <div class="post-card" data-post-id="1">
+                        <div class="post-header">
+                            <span class="post-stars">
+                                ★★★★★                                                            </span>
+                            <span class="post-name"> ذوالفقار شلوم </span>
+                            <span class="post-date"> 2025-06-25 </span>
+                        </div>
+                        <div class="post-content"> تم بحمد الله تعالى . </div>
+                        <div style="margin-top:1rem;display:flex;gap:1.2rem;justify-content:flex-end;">
+                            <button class="like-btn" onclick="handleLikeDislike('1','like')" style="background:#23232a;color:#4ade80;border:none;padding:0.4rem 1.1rem;border-radius:1.2rem;font-weight:700;font-size:1.05rem;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;gap:0.4rem;"><i class="fas fa-thumbs-up"></i> <span class="like-count" data-post-id="1">8</span></button>
+                            <button class="dislike-btn" onclick="handleLikeDislike('1','dislike')" style="background:#23232a;color:#e11d48;border:none;padding:0.4rem 1.1rem;border-radius:1.2rem;font-weight:700;font-size:1.05rem;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;gap:0.4rem;"><i class="fas fa-thumbs-down"></i> <span class="dislike-count" data-post-id="1">0</span></button>
+                        </div>
+                    </div>
+                                    </div>
+                        </div>
+        </section>
+        <nav class="bottom-nav">
+            <a href="index-2.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+            <a href="products.html"><i class="fas fa-cogs"></i><span>المنتجات</span></a>
+            <a href="posts.html"><i class="fas fa-comments"></i><span>المنشورات</span></a>
+            <a href="admin/login.html"><i class="fas fa-sign-in-alt"></i><span>الدخول</span></a>
+        </nav>
+    </div>
+
+<script>
+function handleLikeDislike(postId, type) {
+    const key = 'post-vote-' + postId;
+    if (localStorage.getItem(key)) {
+        return;
+    }
+    // AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST.html', 'vote_post.json', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            try {
+                var res = JSON.parse(xhr.responseText);
+                if (res.success) {
+                    document.querySelectorAll('.like-count[data-post-id="'+postId+'"]').forEach(span => span.textContent = res.like_count);
+                    document.querySelectorAll('.dislike-count[data-post-id="'+postId+'"]').forEach(span => span.textContent = res.dislike_count);
+                    document.querySelectorAll('[data-post-id="'+postId+'"] .like-btn, [data-post-id="'+postId+'"] .dislike-btn').forEach(btn => btn.classList.add('voted'));
+                    localStorage.setItem(key, type);
+                }
+            } catch(e) {}
+        }
+    };
+    xhr.send('post_id='+encodeURIComponent(postId)+'&type='+encodeURIComponent(type));
+}
+
+function updateCounts(postId) {
+    const likeKey = 'post-like-count-' + postId;
+    const dislikeKey = 'post-dislike-count-' + postId;
+    const likeCount = localStorage.getItem(likeKey) || '0';
+    const dislikeCount = localStorage.getItem(dislikeKey) || '0';
+    document.querySelectorAll('.like-count[data-post-id="'+postId+'"]').forEach(span => span.textContent = likeCount);
+    document.querySelectorAll('.dislike-count[data-post-id="'+postId+'"]').forEach(span => span.textContent = dislikeCount);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Active nav link (desktop)
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === 'posts.html') {
+            link.classList.add('active');
+        }
+    });
+
+    // Active nav link (mobile)
+    const mobileNavLinks = document.querySelectorAll('.bottom-nav a');
+    mobileNavLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === 'posts.html') {
+            link.classList.add('active');
+        }
+    });
+
+    // تفعيل أزرار التصويت حسب localStorage
+    document.querySelectorAll('.post-card').forEach(function(card){
+        var postId = card.getAttribute('data-post-id');
+        var key = 'post-vote-' + postId;
+        if(localStorage.getItem(key)){
+            card.querySelectorAll('.like-btn, .dislike-btn').forEach(btn => btn.classList.add('voted'));
+        }
+    });
+});
+</script>
+</body>
+
+<!-- Mirrored from www.dstore.pro/posts.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2025 08:41:47 GMT -->
+</html>

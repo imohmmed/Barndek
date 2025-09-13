@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<!-- Mirrored from www.dstore.pro/add_post.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2025 08:41:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة منشور - براندك</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/logo.jpg">
+    <style>
+        :root {
+            --red: #e11d48;
+            --red-dark: #a31536;
+            --black: #18181b;
+            --black-light: #23232a;
+            --white: #fff;
+            --gray: #a1a1aa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+            padding-bottom: 70px; /* مساحة للفوتر الثابت */
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+        .section { padding: 4rem 0; }
+        .section-title { text-align: center; font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 1rem; }
+        .section-title span { color: var(--red); }
+        .section-subtitle { text-align: center; color: var(--gray); max-width: 600px; margin: 0 auto 3rem auto; }
+        .main-header {
+            background: var(--black-light);
+            border-bottom: 2px solid var(--red);
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-container {
+            min-height: 30px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--red);
+            padding-right: 6rem;
+        }
+        .logo span { color: var(--white); }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 1rem;
+            transition: background 0.2s, color 0.2s;
+            position: relative;
+        }
+        .nav-links a.active,
+        .nav-links a:focus,
+        .nav-links a:hover {
+            background: var(--red);
+            color: var(--white);
+        }
+        .cta-btn {
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 2rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            transition: background 0.2s;
+            display: inline-block;
+            margin-left: 3rem;
+        }
+        .cta-btn:hover { background: var(--red-dark); }
+        footer {
+            background: #000;
+            color: var(--gray);
+            padding: 0.6rem 1rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .desktop-footer {
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+        }
+        .mobile-app {
+            display: none;
+            background: #18181b;
+            min-height: 100vh;
+            font-family: 'Cairo', sans-serif;
+        }
+        /* ==== Stylish Add Post Form ==== */
+        .add-post-form {
+            background: #23232a;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 12px #e11d4822;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 2rem 1.2rem;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        @media (max-width: 768px) {
+            .add-post-form {
+                background: #23232aee;
+                box-shadow: 0 4px 24px #e11d4844;
+                border-radius: 1.5rem;
+                padding: 1.5rem 0.7rem 1.7rem 0.7rem;
+                max-width: 98vw;
+                margin: 1.2rem auto 0 auto;
+                border: 1.5px solid #e11d4844;
+            }
+            .add-post-form .input-group {
+                margin-bottom: 1.3rem;
+            }
+            .add-post-form input,
+            .add-post-form textarea {
+                background: #18181b;
+                border-radius: 1.2rem;
+                font-size: 1.13rem;
+                box-shadow: 0 2px 12px #e11d4822;
+                padding: 1.15rem 1.1rem 1.15rem 2.7rem;
+                border: 1.5px solid #e11d4844;
+                color: #fff;
+            }
+            .add-post-form input:focus,
+            .add-post-form textarea:focus {
+                outline: none;
+                border-color: #e11d48;
+                box-shadow: 0 0 0 2px #e11d4822;
+            }
+            .add-post-form textarea {
+                min-height: 90px;
+            }
+            .add-post-form .star {
+                font-size: 2.1rem;
+            }
+            .add-post-form button[type=submit] {
+                font-size: 1.13rem;
+                padding: 1.1rem 0;
+                border-radius: 2.5rem;
+                margin-top: 0.9rem;
+                box-shadow: 0 2px 18px #e11d4333;
+            }
+        }
+        .add-post-form .input-group { position:relative; margin-bottom:1.1rem; }
+        .add-post-form input,
+        .add-post-form textarea { width:100%; padding:0.9rem 1rem 0.9rem 2.7rem; border-radius:0.8rem; border:none; background:#18181b; color:#fff; font-size:1.08rem; box-shadow:0 1px 4px #0002; }
+        .add-post-form textarea { min-height:90px; resize:vertical; }
+        .add-post-form .input-icon { position:absolute; left:1rem; top:50%; transform:translateY(-50%); color:#e11d48; font-size:1.2rem; }
+        .add-post-form .stars-group { display:flex; gap:0.3rem; margin-bottom:1.1rem; justify-content:center; }
+        .add-post-form .star { font-size:2.1rem; color:#444; cursor:pointer; transition:color 0.2s, transform 0.1s; }
+        .add-post-form .star.selected, .add-post-form .star:hover, .add-post-form .star.hovered { color:#e11d48; transform:scale(1.15); }
+        .add-post-form button[type=submit] { width:100%; background:linear-gradient(90deg,#e11d48 0%,#ff6584 100%); color:#fff; border:none; font-size:1.15rem; font-weight:900; padding:0.9rem 0; border-radius:2rem; box-shadow:0 2px 16px #e11d4333; margin-top:0.5rem; transition:background 0.2s, color 0.2s, box-shadow 0.2s; cursor:pointer; }
+        .add-post-form button[type=submit]:hover { background:linear-gradient(90deg,#fff 0%,#e11d48 100%); color:#e11d48; box-shadow:0 4px 32px #e11d4888; }
+        .add-post-form .msg { text-align:center; margin-bottom:1rem; font-weight:700; }
+        .add-post-form .msg.error { color:#e11d48; }
+        @media (max-width:600px) {
+            .add-post-form { padding:1.2rem 0.5rem; }
+            .add-post-form input, .add-post-form textarea { font-size:0.98rem; }
+            .add-post-form .star { font-size:1.5rem; }
+        }
+        @media (max-width: 768px) {
+            .desktop-footer { display: none !important; }
+            /* لا تخفي .desktop-section حتى يظهر النموذج على الموبايل */
+            /* .desktop-section { display: none !important; } */
+            .mobile-app { display: block !important; padding-bottom: 80px; }
+            .main-header { display: none; }
+            .bottom-nav {
+                position: fixed;
+                bottom: 0; left: 0; right: 0;
+                background: #23232a;
+                border-top: 2px solid #e11d48;
+                display: flex;
+                justify-content: space-around;
+                align-items: stretch;
+                padding: 0.5rem 0;
+                z-index: 1000;
+            }
+            .bottom-nav a {
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 700;
+                font-size: 0.85rem;
+                padding: 0.2rem 0.5rem;
+                flex-grow: 1;
+                transition: color 0.2s;
+            }
+            .bottom-nav a.active, .bottom-nav a:hover { color: #e11d48; }
+            .bottom-nav i { font-size: 1.5rem; margin-bottom: 4px; }
+        }
+        @media (min-width: 769px) {
+            .bottom-nav { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-section">
+        <header class="main-header">
+            <div class="header-container">
+                <a href="index-2.html" class="logo">Dark<span> Store</span></a>
+                <nav class="nav-links" id="mainNav">
+                    <a href="index-2.html">الرئيسية</a>
+                    <a href="products.html">المنتجات</a>
+                    <a href="posts.html" class="active">المنشورات</a>
+                </nav>
+                <a href="admin/login.html" class="cta-btn">تسجيل الدخول</a>
+            </div>
+        </header>
+        <!-- ====== محتوى إضافة منشور ====== -->
+        <main>
+            <section class="section" style="max-width:700px;margin:0 auto;">
+                <h2 class="section-title">إضافة <span>منشور جديد</span></h2>
+                <div class="section-subtitle">شارك رأيك أو تجربتك مع براندك.</div>
+                <div style="color:#e11d48;text-shadow:0 0 7px #e11d48cc,0 0 2px #000;font-weight:900;text-align:center;padding:0.2rem 0 0.7rem 0;margin-bottom:1.1rem;font-size:1.09rem;letter-spacing:0.5px;">
+                    <i  style="font-size:1.3rem;margin-left:0.4rem;"></i>
+                    جميع المنشورات تخضع للمراجعة من قبل الإدارة قبل الموافقة عليها.
+                </div>
+                <div class="add-post-form">
+                                        <form method="post" autocomplete="off" id="addPostForm">
+                        <div class="input-group">
+                            <input type="text" name="name" id="name" placeholder="اسمك" maxlength="100" required>
+                            <span class="input-icon"><i class="fas fa-user"></i></span>
+                        </div>
+                        <div class="stars-group" id="starsGroup">
+                            <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                            <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                            <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                            <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                            <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                        </div>
+                        <input type="hidden" name="stars" id="starsInput" required>
+                        <div class="input-group">
+                            <textarea name="content" id="content" placeholder="محتوى المنشور..." maxlength="1000" required></textarea>
+                            <span class="input-icon"><i class="fas fa-pen"></i></span>
+                        </div>
+                        <button type="submit" name="add_post"><i class="fas fa-paper-plane"></i> نشر المنشور</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="desktop-footer">
+            <div class="container">
+                <p>&copy; 2025 براندك. برمجة وتصميم ذوالفقار شلوم.</p>
+            </div>
+        </footer>
+    </div>
+    <nav class="bottom-nav">
+        <a href="index-2.html"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+        <a href="products.html"><i class="fas fa-cogs"></i><span>المنتجات</span></a>
+        <a href="posts.html" class="active"><i class="fas fa-comments"></i><span>المنشورات</span></a>
+        <a href="admin/login.html"><i class="fas fa-sign-in-alt"></i><span>الدخول</span></a>
+    </nav>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Active nav link (desktop)
+        const navLinks = document.querySelectorAll('.nav-links a');
+        function setActiveLink() {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === 'posts.html') {
+                    link.classList.add('active');
+                }
+            });
+        }
+        setActiveLink();
+        // تفعيل active على رابط المنشورات في الشريط السفلي دائمًا
+        const mobileNavLinks = document.querySelectorAll('.bottom-nav a');
+        function setMobileActiveLink() {
+            mobileNavLinks.forEach(link => link.classList.remove('active'));
+            mobileNavLinks.forEach(link => {
+                if (link.getAttribute('href') === 'posts.html') {
+                    link.classList.add('active');
+                }
+            });
+        }
+        setMobileActiveLink();
+        // نجوم التقييم التفاعلية
+        const stars = document.querySelectorAll('.star');
+        const starsInput = document.getElementById('starsInput');
+        let selected = 0;
+        stars.forEach(star => {
+            star.addEventListener('mouseenter', function() {
+                const val = parseInt(this.dataset.value);
+                stars.forEach((s, i) => {
+                    s.classList.toggle('hovered', i < val);
+                });
+            });
+            star.addEventListener('mouseleave', function() {
+                stars.forEach((s, i) => {
+                    s.classList.remove('hovered');
+                });
+            });
+            star.addEventListener('click', function() {
+                selected = parseInt(this.dataset.value);
+                starsInput.value = selected;
+                stars.forEach((s, i) => {
+                    s.classList.toggle('selected', i < selected);
+                });
+            });
+        });
+        // منع الإرسال بدون اختيار نجمة
+        document.getElementById('addPostForm').addEventListener('submit', function(e) {
+            if (!starsInput.value) {
+                alert('يرجى اختيار عدد النجوم');
+                e.preventDefault();
+            }
+        });
+    });
+    </script>
+</body>
+
+<!-- Mirrored from www.dstore.pro/add_post.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2025 08:41:47 GMT -->
+</html>
